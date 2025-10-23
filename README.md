@@ -1,6 +1,6 @@
 # Gerenciador de frutaria
 
-🍇 FRUTARIA RIO - Sistema de Gerenciamento de E-commerce
+🍇 FRUTARIA RIO - Sistema de Gerenciamento
 
 <p align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellowgreen" alt="Status do Projeto"> <img src="https://img.shields.io/badge/Feito%20com-Django-092E20?logo=django" alt="Tecnologia Principal"> <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20Puro-blue" alt="Frontend"> </p>
 
