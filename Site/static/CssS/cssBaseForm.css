@@ -1,0 +1,136 @@
+/* --- ESTILO DO FORMULÁRIO CONTAINER --- */
+
+/* Aplica o estilo ao <form> que contém todo o conteúdo */
+
+body{
+    background-color: black;
+}
+body form {
+    /* Centraliza o formulário na página de forma responsiva */
+    width: 90%; 
+    max-width: 600px; /* Limita a largura máxima para melhor leitura */
+    margin: 40px auto; 
+    
+    /* Estilo de Card: Fundo, bordas arredondadas e sombra */
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ESTILO DO GRUPO DE CAMPO (DIV.FORM-GROUP) --- */
+
+/* O form-group envolve o label e o input, dando espaçamento vertical */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* --- ESTILO DO LABEL --- */
+
+label {
+    display: block; /* Garante que o label fique acima do campo */
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #38761D; /* Verde Escuro da marca */
+    font-size: 1em;
+}
+
+/* --- ESTILO DOS INPUTS/SELECTS (Usando a classe 'form-control') --- */
+
+/* Esta classe é definida em todos os seus widgets (TextInput, NumberInput, Select, etc.) */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #C8E6A9; /* Borda suave e verde-claro */
+    border-radius: 6px; 
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Foco: Destaque visual ao interagir */
+.form-control:focus {
+    border-color: #FF9900; /* Laranja da fruta ao focar */
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25); /* Anel de foco sutil */
+    outline: none; /* Remove a borda de foco padrão do navegador */
+}
+
+/* Estilo do Placeholder */
+.form-control::placeholder {
+    color: #AAA;
+    font-style: italic;
+}
+
+/* --- ESTILO PARA CAMPOS DE LINHA (Form-Row - Útil para Cliente/Produto) --- */
+
+/* Se você usar form-row para agrupar campos lado a lado (como CEP/Cidade) */
+.form-row {
+    display: flex;
+    gap: 20px; /* Espaço entre as colunas */
+}
+
+/* O col-md-6 garante que os campos dentro do form-row tenham a mesma largura */
+.form-row .form-group {
+    flex: 1; /* Ocupa o espaço disponível igualmente */
+}
+
+/* --- ESTILO DO CHECKBOX (ATIVO) --- */
+
+/* O checkbox está usando a classe 'form-check-input' no ClienteFM */
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    /* Ajustes para cor da marca se necessário */
+}
+
+/* Estilo para o grupo de checkbox (para melhor alinhamento) */
+.form-group .form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check-label {
+    color: #333;
+    font-weight: 500;
+}
+
+/* --- ESTILO DO BOTÃO ENVIAR (Padronizado no baseForm.html) --- */
+
+button[type="submit"] {
+    /* Cor de Ação Principal (Laranja) */
+    background-color: #FF9900; 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 25px;
+    width: 100%; /* Botão em largura total */
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background-color: #E68A00; 
+}
+
+button[type="submit"]:active {
+    transform: scale(0.99); /* Pequeno efeito de clique */
+}
+
+/* --- ESTILO PARA MENSAGENS DE ERRO --- */
+
+/* Assumindo que você renderiza erros em uma div com classe 'error-message' */
+.error-message {
+    color: #CC0000; /* Vermelho para destaque de erro */
+    font-size: 0.9em;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-left: 3px solid #CC0000;
+    background-color: #FFEEEE;
+    border-radius: 0 4px 4px 0;
+}

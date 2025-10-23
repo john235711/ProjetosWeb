@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    produtos
+{% endblock %}
+
+{% block style %}
+    <link rel ="stylesheet" href = "{% static 'CssS/cssProdutosPorCategoria.css' %}">
+{% endblock %}
+{% block content %}
+    <div class = "ContainerBotaoCriar"><a href = "/cadastrarProtudoPorCategoria/{{ categoria }}">Criar produto</a></div>
+    
+    <div class = "ContainerGeralProdutos">
+        {% for produtos in Produtos %}
+        <div class = "ContainerProduto">
+            <h2 class = "NomeProduto"> 
+                {{produtos.nome}}
+            </h2>
+
+            <div class = "Botoes">
+                <div id = "excluir"><a href = "/excluir_produto/{{ produtos.id }}">excluir</a></div>
+                <div id =   "editar"><a href = "/editar_produto/{{ produtos.id }}">editar</a></div>
+                <div id = "ver"><a href = "/ver_produto/{{ produtos.id }}">ver</a></div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+   
+{% endblock %}

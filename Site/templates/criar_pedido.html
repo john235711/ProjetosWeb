@@ -1,0 +1,9 @@
+{% extends 'baseForm.html' %}
+
+{% block content %}
+    <div class="form-group">
+        <label for="{{ form.cliente.id_for_label }}">Cliente</label>
+        {{ form.cliente }}
+        {# O widget SELECT_WIDGET garante a classe form-control aqui! #}
+    </div>
+{% endblock %}

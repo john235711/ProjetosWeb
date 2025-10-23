@@ -1,0 +1,132 @@
+/* RESET BÁSICO E CONFIGURAÇÃO DA FONTE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🍎 Fundo do Corpo: Cores mais quentes e suaves */
+body {
+    /* Mude para um creme claro ou branco puro para destaque */
+    background-color: #F8F4E6; /* Creme suave */
+    /* Fonte limpa e moderna. Use 'serif' como fallback */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* Cor do texto padrão */
+}
+
+/* --- HEADER E NAVEGAÇÃO --- */
+
+/* 🍇 Estilo do Cabeçalho: Cores da terra ou escuras contrastantes */
+header {
+    /* Cor de fundo mais rica, como um verde escuro de folha ou marrom */
+    background-color: #38761D; /* Verde escuro (cor de folha) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+}
+
+/* Título: Destaque principal */
+header .titulo {
+    color: #FFD966; /* Amarelo dourado (como uma banana madura ou sol) */
+    text-align: center;
+    padding: 20px 0; /* Menos padding no topo, mais simétrico */
+    font-size: 3.5em; /* Tamanho ligeiramente menor, mais elegante */
+    font-weight: 700; /* Negrito */
+    letter-spacing: 2px; /* Espaçamento entre letras para um look premium */
+}
+
+/* Nav Bar (o container cinza) */
+header nav {
+    background-color: #6AA84F; /* Verde mais claro para o menu */
+    display: flex;
+    justify-content: center; /* Centraliza a barra de navegação */
+    padding: 0;
+}
+
+/* Lista: Remove os marcadores padrão */
+nav ul {
+    list-style: none; /* Remove bolinhas */
+    padding: 0;
+}
+
+/* Itens do Menu (li) */
+nav ul li {
+    display: inline-block;
+    padding: 15px 25px; /* Padding menor e mais equilibrado */
+    transition: background-color 0.3s ease; /* Transição suave */
+    cursor: pointer;
+}
+
+/* 🥭 Efeito Hover: Mais convidativo */
+nav ul li:hover {
+    background-color: #FFD966; /* Amarelo da fruta (contraste) */
+}
+
+/* Link (a) - Estilo padrão */
+a {
+    text-decoration: none;
+    color: #333; /* Texto preto/escuro para boa legibilidade */
+    font-weight: 600; /* Deixa o texto do link mais forte */
+}
+
+/* Link (a) - Efeito Hover */
+nav ul li a:hover {
+    color: #333; /* Mantém a cor do texto do link escura ou ajuste sutilmente */
+}
+/* Garante que a cor do link dentro do hover do LI seja forte */
+nav ul li:hover a {
+    color: #333; 
+}
+
+
+/* --- CONTEÚDO PRINCIPAL --- */
+
+/* Conteúdo */
+.conteudo {
+    /* Padding interno para afastar o conteúdo das bordas */
+    padding: 40px 20px; 
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo na tela */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adiciona espaçamento entre elementos dentro do conteúdo */
+}
+
+/* --- ESTILIZAÇÃO DOS FORMULÁRIOS (BASEADO NOS WIDGETS) --- */
+
+/* Estilo para o grupo de formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para os inputs (usando a classe 'form-control' dos seus widgets) */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C8E6A9; /* Borda suave e verde-claro */
+    border-radius: 6px; /* Bordas arredondadas suaves */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #FF9900; /* Borda laranja/fruta ao focar */
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+    outline: none;
+}
+
+/* Botão Enviar (Adicionado no baseForm.html) */
+button[type="submit"] {
+    background-color: #FF9900; /* Laranja vibrante (cor de fruta) */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #E68A00; /* Laranja um pouco mais escuro no hover */
+}

@@ -1,0 +1,82 @@
+/* --- ESTILO DO CONTAINER GERAL (CARD) --- */
+
+/* Centraliza a tabela e a transforma em um container de informações */
+.content table {
+    /* Ocupa a largura máxima definida, centralizada */
+    width: 90%; 
+    max-width: 800px;
+    margin: 40px auto; 
+    
+    /* Estilo de Card */
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    overflow: hidden; /* Garante que as bordas arredondadas sejam aplicadas */
+}
+
+/* --- ESTILO DO CABEÇALHO (TH - Títulos) --- */
+
+/* Fundo verde para os títulos, como nos outros cabeçalhos de tabela */
+table tr:first-child {
+    background-color: #6AA84F; /* Verde Claro */
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+th {
+    padding: 15px 10px;
+    letter-spacing: 0.5px;
+    border: none;
+    /* Adicionamos uma borda à direita para separar visualmente os títulos */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+/* Remove a borda direita do último TH */
+table tr:first-child th:last-child {
+    border-right: none;
+}
+
+/* --- ESTILO DAS CÉLULAS DE DADOS (TD - Valores) --- */
+
+td {
+    padding: 18px 10px; /* Mais padding para espaçamento e leitura */
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: left;
+    /* Borda para separar as colunas de dados */
+    border-right: 1px solid #EEEEEE; 
+    border-top: 1px solid #EEEEEE; 
+}
+
+/* Remove a borda direita da última TD */
+table tr td:last-child {
+    border-right: none;
+}
+
+/* --- DESTAQUE PARA CAMPOS CHAVE --- */
+
+/* Destaque para o NOME do Produto (Primeira TD) */
+table tr td:first-child {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #38761D; /* Verde Escuro */
+}
+
+/* Destaque para o PREÇO UNITÁRIO */
+/* Seleciona a célula do Preço Unitário (4ª TD) */
+table tr td:nth-child(4) {
+    font-weight: 800;
+    font-size: 1.15em;
+    color: #FF9900; /* Laranja de Destaque */
+}
+
+/* Destaque para o ESTOQUE (Última TD) */
+table tr td:last-child {
+    font-weight: 700;
+    color: #CC0000; /* Vermelho/Alerta */
+    /* Você pode ajustar esta cor com base na quantidade, mas aqui é um destaque padrão */
+}

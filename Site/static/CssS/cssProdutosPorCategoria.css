@@ -1,0 +1,135 @@
+/* --- ESTILO GLOBAL DO CONTAINER DE CATEGORIAS --- */
+
+/* Container que organiza a grade de todos os cards */
+.ContainerGeralProdutos {
+    display: grid;
+    /* Adaptação: Permite 3 colunas, mas torna-se responsivo em telas menores. */
+    /* Você pode ajustar 'auto auto auto' para 'repeat(auto-fit, minmax(250px, 1fr))' 
+       se quiser que seja totalmente responsivo em telas pequenas, mas manteremos o seu 'auto auto auto' para consistência. */
+    grid-template-columns: auto auto auto; 
+    justify-content: space-around;
+    row-gap: 30px;
+    column-gap: 30px; /* Adiciona espaçamento entre as colunas */
+    padding: 20px 0;
+}
+
+/* --- ESTILO DO CARD INDIVIDUAL (CATEGORIA) --- */
+
+.ContainerProduto {
+    width: 250px;
+    height: 250px;
+    /* Fundo suave para o card, em vez de aquamarine */
+    background-color: #FFFFFF; /* Branco Puro */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para flutuar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o hover */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px; /* Padding interno para o conteúdo */
+    border: 1px solid #E6E6E6; /* Borda sutil */
+}
+
+/* Efeito de hover no card */
+.ContainerProduto :hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* --- NOME DA CATEGORIA --- */
+
+.NomeProduto {
+    text-align: center;
+    color: #38761D; /* Verde escuro (cor principal da marca) */
+    font-size: 1.5em;
+    padding: 20px 0;
+    margin-top: 20px; /* Afasta um pouco do topo */
+}
+
+/* --- BOTÕES DE AÇÃO --- */
+
+.Botoes {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #F0F0F0; /* Linha divisória sutil */
+}
+
+.Botoes div {
+    /* Remove padding do div e aplica ao link para que o clique seja na área toda */
+    padding: 0; 
+    flex-grow: 1; /* Permite que os divs se expandam igualmente */
+    text-align: center;
+}
+
+/* Estilo para os Links (botões) */
+.Botoes a {
+    display: block; /* Ocupa todo o espaço do div */
+    padding: 8px 5px; 
+    font-weight: 600;
+    font-size: 0.9em;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-transform: uppercase;
+}
+
+/* --- ESTILOS DE COR INDIVIDUAIS PARA OS BOTÕES --- */
+
+/* Botão 'excluir' (Vermelho/Alerta) */
+#excluir a {
+    background-color: #FF6961; /* Vermelho suave (alerta) */
+    color: white;
+    margin-right: 5px;
+}
+#excluir a:hover {
+    background-color: #E0534C;
+}
+
+/* Botão 'editar' (Amarelo/Ação Secundária) */
+#editar a {
+    background-color: #FFD966; /* Amarelo dourado (neutro/secundário) */
+    color: #333;
+    margin: 0 5px;
+}
+#editar a:hover {
+    background-color: #FFC400;
+}
+
+/* Botão 'ver' (Verde/Ação Primária) */
+#ver a {
+    background-color: #6AA84F; /* Verde primário da marca */
+    color: white;
+    margin-left: 5px;
+}
+#ver a:hover {
+    background-color: #4F8A37;
+}
+
+/* --- ESTILO DO BOTÃO DE CRIAÇÃO (TOPO) --- */
+
+.ContainerBotaoCriar {
+    text-align: right;
+    max-width: 1200px;
+    margin: 20px auto 10px auto; /* Centraliza e adiciona margem */
+    padding-right: 20px;
+}
+
+.ContainerBotaoCriar a {
+    background-color: #FF9900; /* Laranja vibrante (Ação principal) */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.ContainerBotaoCriar a:hover {
+    background-color: #E68A00;
+}
+
+.NomeProduto{
+    text-align: center;
+}

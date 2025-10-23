@@ -1,0 +1,20 @@
+{% extends 'baseForm.html' %}
+
+{% block content %}
+    
+    <div class="form-group">
+        <label for="{{ form.produto.id_for_label }}">Produto</label>
+        {{ form.produto }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.quantidade.id_for_label }}">Quantidade</label>
+        {{ form.quantidade }}
+    </div>
+
+    {# NOVO ELEMENTO AQUI: Link/Botão para voltar para a HOME #}
+    <div class="form-group mt-3">
+        {# O "btn btn-secondary" é uma classe Bootstrap comum para botões secundários #}
+        <a href="{% url 'home' %}" class="btn btn-secondary">Voltar para a Home</a> 
+    </div>
+
+{% endblock %}

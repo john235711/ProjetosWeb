@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    clientes
+{% endblock %}
+
+
+{% block style %}
+    <link rel = "stylesheet" href = "{% static 'CssS/cssClientes.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class = "ContainerBotaoCriar"> <a href = "{% url 'criar_cliente' %}">Criar cliente</a></div>
+
+    <div class = "ContainerGeralClientes">
+       <table>
+            <tr>
+                <th>NOME</th>
+                <th>CPF</Th>
+                <th>ATIVO</th>
+            </tr>
+
+            {% for cliente in clientes %}
+                <tr>
+                    <td>{{ cliente.nome }}</td>
+                    <td>{{ cliente.cpf }}</td>
+                    <td>
+                        {% if cliente.ativo %}
+                            sim 
+                        {% else %}
+                            nao
+                        {% endif %}
+                    </td>
+                    <td><a href = "/editar_cliente/{{ cliente.id }}">EDITAR</a></td>
+                    <td><a href = "/excluir_cliente/{{ cliente.id }}">EXCLUIR</a></td>
+                    <td><a href = "/detalhar_cliente/{{ cliente.id }}">DETALHAR</a></td>
+                </tr>
+            {% endfor %}
+       </table>
+        
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'baseForm.html' %}
+{% load static %}
+{% block content %}
+    <div class="form-group">
+        <label for="{{ form.nome.id_for_label }}">Nome da Categoria</label>
+        {{ form.nome }}
+        
+        {# Opcional: Mostrar erros e ajuda #}
+        {% if form.nome.errors %}
+            <div class="error-message">{{ form.nome.errors }}</div>
+        {% endif %}
+    </div>
+{% endblock %}

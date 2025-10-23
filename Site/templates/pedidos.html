@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    pedidos
+{% endblock %}
+
+
+{% block style %}
+    <link rel = "stylesheet" href = "{% static 'CssS/cssPedidos.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class = "ContainerBotaoCriar"> <a href = "/criar_pedido">Criar pedido</a></div>
+
+    <div class = "ContainerGeralPedidos">
+       <table>
+            <tr>
+                <th>CLIENTE</th>
+                <th>DATA</th>
+            </tr>
+
+            {% for pedido in pedidos %}
+                <tr>
+                    <td>{{ pedido.cliente }}</td>
+                    <td>{{ pedido.data }}</td>
+                    <td><a href = "/detalhar_pedido/{{ pedido.id }}">DETALHAR</a></td>
+                    <td><a href = "/excluir_pedido/{{ pedido.id }} ">EXCLUIR</a></td>
+                    
+                </tr>
+            {% endfor %}    
+            
+       </table>
+        
+    </div>
+
+   
+{% endblock %}

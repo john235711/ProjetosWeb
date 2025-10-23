@@ -1,0 +1,95 @@
+/* --- ESTILO DO CONTAINER DE EXIBIÇÃO --- */
+
+.tabelaExibicao {
+    /* Centraliza o bloco e limita a largura */
+    width: 90%; 
+    max-width: 750px;
+    margin: 40px auto; 
+    
+    /* Estilo de Card */
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+    border-left: 5px solid #FF9900; /* Borda lateral Laranja (destaque para transações) */
+}
+
+/* --- ESTILO GERAL DOS TÍTULOS (H3) --- */
+
+.tabelaExibicao h3 {
+    font-size: 1.1em;
+    font-weight: 500; 
+    color: #333; 
+    line-height: 1.6;
+    padding: 8px 0;
+}
+
+/* --- SEÇÃO DE DADOS DO CLIENTE/PEDIDO (Topo) --- */
+
+/* Estilo para os primeiros 3 campos (Cliente, CPF, Data) */
+.tabelaExibicao h3:nth-child(1),
+.tabelaExibicao h3:nth-child(2),
+.tabelaExibicao h3:nth-child(3) {
+    border-bottom: 1px dashed #E6E6E6; /* Separador */
+    padding-left: 5px;
+}
+
+/* Destaque para o Nome do Cliente */
+.tabelaExibicao h3:first-child {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #38761D; /* Verde Escuro */
+    margin-bottom: 5px;
+    padding-top: 0;
+    border-bottom: 2px solid #38761D; /* Borda mais forte para o nome */
+    padding-bottom: 10px;
+}
+
+/* --- SEÇÃO PRODUTOS (Cabeçalho da Lista) --- */
+
+/* Estilo para o título "PRODUTOS:" */
+.tabelaExibicao h3:nth-child(4) {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #FF9900; /* Laranja de Destaque */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #FF9900;
+}
+
+/* --- ESTILO DA LISTA DE ITENS --- */
+
+/* Estilo para cada item de produto (que começa a partir do h3:nth-child(5)) */
+/* Criando um visual de lista com padding e fundo suave */
+.tabelaExibicao h3:nth-child(n+5):not(:last-child) {
+    /* Fundo sutil para o item */
+    background-color: #F8F8F8; 
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between; /* Alinha nome/quantidade nas extremidades */
+}
+
+/* Destaque para o nome do produto na lista */
+.tabelaExibicao h3:nth-child(n+5) strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* --- ESTILO DO TOTAL (Rodapé) --- */
+
+/* Seleciona o último H3 (TOTAL) */
+.tabelaExibicao h3:last-child {
+    font-size: 2em; /* Tamanho maior */
+    font-weight: 800;
+    color: white; /* Texto Branco */
+    background-color: #38761D; /* Verde Escuro (Cor primária) */
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

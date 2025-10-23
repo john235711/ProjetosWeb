@@ -1,0 +1,119 @@
+/* --- ESTILO DO BOTÃO DE CRIAÇÃO (Herdado do cssCategorias.css, mas repetido aqui para garantir) --- */
+
+.ContainerBotaoCriar {
+    text-align: right;
+    max-width: 1200px;
+    margin: 20px auto 10px auto; 
+    padding-right: 20px;
+}
+
+.ContainerBotaoCriar a {
+    background-color: #FF9900; /* Laranja vibrante (Ação principal) */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.ContainerBotaoCriar a:hover {
+    background-color: #E68A00;
+}
+
+/* --- ESTILO DA TABELA DE PEDIDOS --- */
+
+.ContainerGeralPedidos {
+    /* Centraliza a tabela e aplica margem para o conteúdo principal */
+    width: 95%; 
+    max-width: 1000px;
+    margin: 20px auto; 
+    background-color: #FFFFFF; /* Fundo branco para a tabela */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Garante scroll em telas muito pequenas */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove o espaçamento duplo das bordas */
+    table-layout: fixed; /* Ajuda a controlar a largura das colunas */
+}
+
+/* 🥝 Cabeçalho da Tabela (THEAD/TR) */
+table tr:first-child {
+    background-color: #6AA84F; /* Verde claro (cor secundária da marca) */
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+th {
+    padding: 15px 10px;
+    text-align: left;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+/* Larguras específicas para melhor organização */
+table th:nth-child(1) { width: 35%; } /* Cliente */
+table th:nth-child(2) { width: 25%; } /* Data */
+table th:nth-child(3) { width: 20%; } /* Botão Detalhar (TD) */
+table th:nth-child(4) { width: 20%; } /* Botão Excluir (TD) */
+
+
+/* 🍎 Linhas de Dados (TBODY/TR) */
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #EEEEEE; /* Linha divisória suave */
+    color: #333;
+    font-size: 0.95em;
+    vertical-align: middle;
+}
+
+/* Efeito Zebra: Alterna a cor do fundo das linhas para facilitar a leitura */
+table tr:nth-child(even) {
+    background-color: #F9F9F9; /* Cinza muito claro */
+}
+
+/* Efeito de Hover na linha */
+table tr:hover {
+    background-color: #FFFBE6; /* Amarelo claríssimo no hover */
+}
+
+/* --- ESTILO DOS LINKS (AÇÕES) NA TABELA --- */
+
+/* Estilo base dos links dentro da tabela */
+table td a {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+/* Link DETALHAR (Ação Primária/Secundária) */
+table td:nth-child(3) a {
+    background-color: #FFD966; /* Amarelo Dourado */
+    color: #333;
+}
+table td:nth-child(3) a:hover {
+    background-color: #FFC400;
+}
+
+/* Link EXCLUIR (Ação Destrutiva) */
+table td:nth-child(4) a {
+    background-color: #FF6961; /* Vermelho Suave */
+    color: white;
+}
+table td:nth-child(4) a:hover {
+    background-color: #E0534C;
+}
+
+/* Garante que a última linha não tenha borda inferior */
+table tr:last-child td {
+    border-bottom: none;
+}

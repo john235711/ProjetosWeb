@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} 
+detalhamento de pedidos 
+{% endblock %}
+
+
+{% block style %}
+    <link rel = "stylesheet" href = "{% static 'CssS/cssDetalhamentoDoPedido.css' %}">
+
+{% endblock %}
+
+
+
+{% block content %}
+    //tenho que exibir o cliente, seu cpf, os items e suas quantidades e o total no valor
+
+    <div class = "tabelaExibicao">
+        <h3>CLIENTE: {{ pedido.cliente.nome }}</h3>
+        <h3>CPF: {{ pedido.cliente.cpf }}</h3>
+        <h3>DATA: {{ pedido.data }}</h3>
+        <h3>PRODUTOS:</h3>
+         {% for item_pedidos in lista_de_items_pedidos %}
+            <h3>{{ item_pedidos.produto.nome }}   {{ item_pedidos.quantidade }}{{ item_pedidos.produto.unidade_de_venda }} </h3>
+         {% endfor %}
+
+         <h3>TOTAL: {{ pedido.valor_total }}R$ </h3>
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,149 @@
+/* --- ESTILO DO BOTÃO DE CRIAÇÃO (Reaproveitando o Laranja/Ação Principal) --- */
+
+.ContainerBotaoCriar {
+    text-align: right;
+    width: 95%; /* Ajusta para a mesma largura da tabela */
+    max-width: 1000px;
+    margin: 20px auto 10px auto; 
+    padding-right: 20px;
+}
+
+.ContainerBotaoCriar a {
+    background-color: #FF9900; /* Laranja vibrante */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.ContainerBotaoCriar a:hover {
+    background-color: #E68A00;
+}
+
+/* --- ESTILO DA TABELA DE CLIENTES (MUITO SIMILAR A PEDIDOS PARA CONSISTÊNCIA) --- */
+
+.ContainerGeralClientes {
+    /* Centraliza a tabela */
+    width: 95%; 
+    max-width: 1000px;
+    margin: 20px auto; 
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    /* Usamos auto para que as colunas de ação ocupem o mínimo espaço necessário */
+    table-layout: auto; 
+}
+
+/* 🥝 Cabeçalho da Tabela */
+table tr:first-child {
+    background-color: #6AA84F; /* Verde claro */
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+th {
+    padding: 15px 10px;
+    text-align: left;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+/* 🍎 Linhas de Dados */
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #EEEEEE; 
+    color: #333;
+    font-size: 0.95em;
+    vertical-align: middle;
+}
+
+/* Efeito Zebra */
+table tr:nth-child(even) {
+    background-color: #F9F9F9; 
+}
+
+/* Efeito de Hover na linha */
+table tr:hover {
+    background-color: #FFFBE6; 
+}
+
+/* --- ESTILO DA COLUNA ATIVO (Para destaque visual) --- */
+
+/* Seleciona a coluna ATIVO (3ª coluna do TR) */
+table tr td:nth-child(3) {
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Estiliza o status "sim" (ativo) */
+table tr td:nth-child(3):contains("sim") {
+    color: #38761D; /* Verde Escuro */
+}
+
+/* Estiliza o status "nao" (inativo) */
+table tr td:nth-child(3):contains("nao") {
+    color: #CC0000; /* Vermelho Forte */
+}
+
+/* --- ESTILO DOS LINKS (AÇÕES) NA TABELA --- */
+
+/* Estilo base dos links dentro das colunas de ação (4ª, 5ª, 6ª coluna do TR) */
+table td:nth-child(4),
+table td:nth-child(5),
+table td:nth-child(6) {
+    text-align: center; /* Centraliza o link na célula */
+}
+
+table td a {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 0.85em; /* Ligeiramente menor para caber */
+    white-space: nowrap; /* Impede a quebra de linha dos textos EDITAR/EXCLUIR/DETALHAR */
+}
+
+/* 1. Botão EDITAR (Amarelo/Secundário) */
+table td:nth-child(4) a {
+    background-color: #FFD966; 
+    color: #333;
+}
+table td:nth-child(4) a:hover {
+    background-color: #FFC400;
+}
+
+/* 2. Botão EXCLUIR (Vermelho/Destrutivo) */
+table td:nth-child(5) a {
+    background-color: #FF6961; 
+    color: white;
+}
+table td:nth-child(5) a:hover {
+    background-color: #E0534C;
+}
+
+/* 3. Botão DETALHAR (Verde/Primário) */
+table td:nth-child(6) a {
+    background-color: #6AA84F; 
+    color: white;
+}
+table td:nth-child(6) a:hover {
+    background-color: #4F8A37;
+}
+
+/* Garante que a última linha não tenha borda inferior */
+table tr:last-child td {
+    border-bottom: none;
+}

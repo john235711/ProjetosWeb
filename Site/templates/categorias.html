@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+    categorias
+{% endblock %}
+
+
+{% block style %}
+    <link href = "{% static 'CssS/cssCategorias.css' %}" rel = "stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    
+    <div class = "ContainerBotaoCriar"> <a href = "{% url 'cadastrarCategoria' %}">Criar categoria</a> </div>
+
+    <div class = "ContainerGeralDasCategorias">
+    {% for categorias in Categorias %}
+        <div class = "ContainerCategorias">
+            <h2 class = "NomeCategoria"> {{categorias.nome}}</h2>
+
+            <div class = "Botoes">
+                <div id = "excluir"><a href =  "{% url 'excluirCategoria' id=categorias.id %}">excluir</a></div>
+                <div id = "editar"><a href = "{% url 'editarCategoria' id=categorias.id %}">editar</a></div>
+                <div id = "ver"><a href = "{% url  'produtosPorCategoria' id_categoria=categorias.id %}">ver</a></div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+
+{% endblock %}

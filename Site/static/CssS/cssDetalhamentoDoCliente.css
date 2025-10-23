@@ -1,0 +1,65 @@
+/* --- ESTILO DO CONTAINER DE EXIBIÇÃO --- */
+
+.tabelaExibicao {
+    /* Centraliza o bloco e limita a largura para melhor leitura */
+    width: 90%; 
+    max-width: 700px;
+    margin: 40px auto; 
+    
+    /* Estilo de Card */
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+    border-left: 5px solid #6AA84F; /* Borda lateral verde (cor da marca) */
+}
+
+/* --- ESTILO DOS TÍTULOS (H3) --- */
+
+.tabelaExibicao h3 {
+    font-size: 1.15em;
+    font-weight: 500; /* Menos negrito para leitura de texto longo */
+    color: #333; /* Cor do texto padrão */
+    line-height: 1.6;
+    padding: 8px 0;
+    border-bottom: 1px dashed #E6E6E6; /* Linha divisória sutil e estilizada */
+}
+
+/* Remove a borda do último elemento para limpeza */
+.tabelaExibicao h3:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Destaque para o NOME (primeiro H3) */
+.tabelaExibicao h3:first-child {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #38761D; /* Verde Escuro (Cor primária) */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #38761D; /* Borda mais forte para o nome */
+}
+
+/* --- DESTAQUE PARA OS VALORES (SIM/NAO) --- */
+
+/* Estilo para o campo ATIVO */
+.tabelaExibicao h3:has(span.status-ativo) {
+    /* Cor de fundo sutil para o campo de status */
+    background-color: #F8F4E6; 
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Se você puder envolver SIM/NAO com um <span> no HTML, use estas classes: */
+/* SIM (Ativo) */
+.tabelaExibicao .status-ativo.sim {
+    color: #38761D; /* Verde Escuro */
+    font-weight: 700;
+}
+
+/* NAO (Inativo) */
+.tabelaExibicao .status-ativo.nao {
+    color: #CC0000; /* Vermelho Forte */
+    font-weight: 700;
+}
